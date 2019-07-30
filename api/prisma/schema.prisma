@@ -1,0 +1,20 @@
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://user:pass@localhost:3306/prisma"
+}
+
+generator photon {
+  provider  = "photonjs"
+  platforms = ["native", "darwin", "linux-glibc-libssl1.0.2"]
+}
+
+generator nexus_prisma {
+  provider = "nexus-prisma"
+}
+
+model User {
+  id    String @default(cuid()) @id @unique
+  name  String
+  email String @unique
+}

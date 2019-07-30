@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "prisma2 generate",
+    "seed": "node prisma/seed.js",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@prisma/nexus": "0.0.1",
+    "apollo-server-micro": "^2.7.1",
+    "graphql": "^14.4.2",
+    "nexus": "^0.12.0-beta.6",
+    "prisma2": "^2.0.0-preview-3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "typescript": "^3.5.3"
+  }
+}
